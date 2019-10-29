@@ -1,0 +1,28 @@
+package test;
+
+import java.util.ArrayList;
+
+public class Find_Pass extends Super{
+
+	String ary1, ary2; int num, num2=0, num3=0;
+	
+	String find_if(String ary1, String ary2) {
+		ArrayList<String> result = (ArrayList<String>)set_map.get("id");
+		ArrayList<String> phone = (ArrayList<String>)set_map.get("phone_num");
+		ArrayList<String> Find_pass = (ArrayList<String>)set_map.get("password");
+		
+		if(result != null) {
+			num2=0;
+			for(String s : result) {
+				if(ary1.equals(s)) {
+					num3 = num2;
+					if((phone.get(num3)).equals(ary2)) {
+						return Find_pass.get(num3);
+					}
+				}
+				num2++;
+				}
+			}
+		return "Error";
+		}
+	}
